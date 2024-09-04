@@ -7,7 +7,7 @@
 body {
   background: #ffffff;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .intro {
@@ -27,16 +27,15 @@ p {
 
 #first {
   margin-top: 10px;
-  color: #FFCD5D;
+  color: #ffcd5d;
 }
 
 #second {
-  color: #51DF70;
-
+  color: #51df70;
 }
 
 #third {
-  color: #025F70;
+  color: #025f70;
   margin-bottom: 30px;
 }
 
@@ -61,17 +60,15 @@ p {
 }
 
 #enter:hover {
-  background-color: #02798F;
-  color: #FFCD5D;
+  background-color: #02798f;
+  color: #ffcd5d;
 }
 
 ul {
   text-align: left;
   margin-top: 20px;
   display: inline-block;
-
 }
-
 
 li {
   list-style: none;
@@ -96,7 +93,7 @@ li:hover {
   color: #000;
 }
 
-li>button {
+li > button {
   font-weight: normal;
   background: none;
   border: none;
@@ -112,12 +109,27 @@ input {
   border: none;
 }
 
-
 .done {
-  background: #51DF70 !important;
-  color: #00891E;
+  background: #51df70 !important;
+  color: #00891e;
 }
 
 .delete {
   display: none;
+}
+
+#addTask {
+  background-color: rgb(5, 147, 230);
+  color: white;
+  border-radius: 20px;
+  border-color: none;
+  width: 90px;
+}
+
+#askUser {
+  background-color: rgb(5, 147, 230);
+  color: white;
+  border-radius: 20px;
+  border-color: none;
+  width: 90px;
 }

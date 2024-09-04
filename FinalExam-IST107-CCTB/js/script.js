@@ -45,56 +45,6 @@ function listLength() {
   return item.length;
 }
 
-function createListElement() {
-  let li = document.createElement("li");
-  li.appendChild(document.createTextNode(input.value));
-  ul.appendChild(li);
-  input.value = "";
-
-  // Add delete button
-  let dBtn = document.createElement("button");
-  dBtn.appendChild(document.createTextNode("X"));
-  li.appendChild(dBtn);
-
-  // Delete task functionality
-  dBtn.addEventListener("click", function () {
-    ul.removeChild(li);
-  });
-
-  // Cross-out functionality
-  li.addEventListener("click", function () {
-    li.classList.toggle("done");
-  });
-}
-
-function addListAfterClick() {
-  if (inputLength() > 0) {
-    // Check for duplicate task
-    let duplicate = false;
-    let tasks = document.querySelectorAll("li");
-    tasks.forEach(function (li) {
-      if (li.textContent.replace("X", "").trim() === input.value) {
-        duplicate = true;
-      }
-    });
-
-    if (duplicate) {
-      alert("Task already exists. Please enter a new task.");
-    } else {
-      createListElement();
-    }
-  }
-}
-
-function addListAfterKeypress(event) {
-  if (inputLength() > 0 && event.which === 13) {
-    //this now looks to see if you hit "enter"/"return"
-    //the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
-    createListElement();
-  }
-}
-
-// Function to implement the "Ask User" button functionality
 // Function to implement the "Ask User" button functionality
 function askUserForTasks() {
   let task = "";
